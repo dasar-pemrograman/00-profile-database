@@ -1,5 +1,10 @@
 <?php
 
+// ensure that the session is enabled
+if (session_status() !== PHP_SESSION_ACTIVE) {
+    session_start();
+}
+
 // to read a POST parameter sent by form use the $_POST global array.
 // the index of the $_POST is the name of the HTML element we want to read.
 // the following line reads the value in the HTML element named 'full_name'
